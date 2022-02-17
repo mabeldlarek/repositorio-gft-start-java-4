@@ -1,0 +1,24 @@
+package exercicios;
+
+public class Três {
+	private int areaQuadrilatero;
+	
+	public Três() {
+		this.areaQuadrilatero = 0;
+	}
+
+	public int calcularArea(int lado){
+		areaQuadrilatero= lado * lado;
+		return areaQuadrilatero;
+	}
+	
+	public int calcularArea(int lado, int base){
+		areaQuadrilatero= lado * base;
+		return areaQuadrilatero;
+	}
+	
+	public int calcularArea(int baseMaior, int baseMenor, int altura){
+		areaQuadrilatero= ((baseMaior + baseMenor) * altura) / 2;
+		return areaQuadrilatero;
+	}
+}
