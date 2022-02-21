@@ -3,6 +3,6 @@ Repositório destinado às anotações, projetos e exercícios correspondentes a
 
 ## Tópicos:
   <ul> 
-  <li> <a href=https://github.com/mabeldlarek/resumos/tree/main/GitGitHub > Git e Git Hub </a> </li>
+  <li> <a href=https://github.com/mabeldlarek/resumos/blob/main/GitGitHub/Git-GitHub.md > Git e Git Hub </a> </li>
   </ul>
 
