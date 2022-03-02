@@ -7,7 +7,7 @@ public class Um {
 		this.total = 0;
 	}
 
-	public void escolhaOperação(int opcao, double valor1, double valor2) {
+	public void escolhaOperacao(int opcao, double valor1, double valor2) {
 		switch(opcao) {
 		case 1: realizarSoma(valor1, valor2);
 			break;
@@ -22,22 +22,22 @@ public class Um {
 	
 	private void realizarSoma(double valor1, double valor2){
 		total=valor1+valor2;
-		System.out.println("O total é: " + total + "\n");
+		System.out.println("O total ï¿½: " + total + "\n");
 	}
 	
 	private void realizarSubtracao(double valor1, double valor2){
 		total=valor1-valor2;
-		System.out.println("O total é: " + total + "\n");
+		System.out.println("O total Ã©: " + total + "\n");
 	}
 	
 	private void realizarMultiplicacao(double valor1, double valor2){
 		total=valor1*valor2;	
-		System.out.println("O total é: " + total + "\n");
+		System.out.println("O total Ã©: " + total + "\n");
 	}
 	
 	private void realizarDivisao(double valor1, double valor2){
 		total=valor1/valor2;
-		System.out.println("O total é: " + total + "\n");
+		System.out.println("O total Ã©: " + total + "\n");
 	}
 	
 	public void printarMensagem(int hora) {

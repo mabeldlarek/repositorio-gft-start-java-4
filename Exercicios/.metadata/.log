@@ -139,3 +139,884 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+!SESSION 2022-02-17 15:29:22.200 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2022-02-17 15:30:11.710
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-02-17 15:30:11.710
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@351fadfa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7e1953f7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-02-17 15:30:46.921
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Maria Izabel'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-17 15:31:00.522
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-17 15:31:00.526
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+!SESSION 2022-02-18 16:09:09.451 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data C:\Users\Maria Izabel\Documents\JAVA_ARQUIVOS\dio-java\Exercicios -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2022-02-18 16:09:20.950
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-02-18 16:09:20.951
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39b9dc35,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@25da1dc9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-02-18 16:09:40.757
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Maria Izabel'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-18 16:09:46.976
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-18 16:09:46.979
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 4 2022-02-18 18:16:58.885
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1371/0x0000000801b45ba0@3eecc62a, thread Worker-19: Launching Ex3_MaiorMedia will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2022-02-18 18:16:58.904
+!MESSAGE Worker-19: Launching Ex3_MaiorMedia thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-19: Launching Ex3_MaiorMedia
+	at java.management@16.0.1/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@16.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:485)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4742)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.handleStatus(Prompter.java:81)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.saveBeforeLaunch(LaunchConfigurationDelegate.java:245)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.preLaunchCheck(LaunchConfigurationDelegate.java:197)
+	at org.eclipse.jdt.launching.AbstractJavaLaunchConfigurationDelegate.preLaunchCheck(AbstractJavaLaunchConfigurationDelegate.java:1026)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:766)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2022-02-18 18:16:58.904
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:75)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer$$Lambda$817/0x000000080157cce0.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.ui.internal.Workbench$$Lambda$132/0x0000000800d87bd0.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base@16.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@16.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base@16.0.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@16.0.1/java.lang.reflect.Method.invoke(Method.java:567)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at app//org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+!SESSION 2022-02-19 11:03:14.797 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2022-02-19 11:06:36.832
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-02-19 11:06:36.832
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7603cfc2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@60256d1b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-02-19 11:07:00.985
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Maria Izabel'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-19 11:07:07.690
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-19 11:07:07.753
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 4 2022-02-19 11:29:15.317
+!MESSAGE To avoid deadlock while executing Display.syncExec() with argument: org.eclipse.debug.internal.ui.sourcelookup.Prompter$$Lambda$1285/0x0000000801aa1be0@4db94325, thread Worker-11: Launching Fatorial will interrupt UI thread.
+!SUBENTRY 1 org.eclipse.ui 4 4 2022-02-19 11:29:15.329
+!MESSAGE Worker-11: Launching Fatorial thread is an instance of Worker or owns an ILock
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread Worker-11: Launching Fatorial
+	at java.management@16.0.1/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@16.0.1/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:485)
+	at org.eclipse.ui.internal.UILockListener.reportInterruption(UILockListener.java:209)
+	at org.eclipse.ui.internal.UILockListener.interruptUI(UILockListener.java:179)
+	at org.eclipse.ui.internal.PendingSyncExec.waitUntilExecuted(PendingSyncExec.java:92)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:142)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4742)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.handleStatus(Prompter.java:81)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.saveBeforeLaunch(LaunchConfigurationDelegate.java:245)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.preLaunchCheck(LaunchConfigurationDelegate.java:197)
+	at org.eclipse.jdt.launching.AbstractJavaLaunchConfigurationDelegate.preLaunchCheck(AbstractJavaLaunchConfigurationDelegate.java:1026)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:766)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.ui 4 4 2022-02-19 11:29:15.329
+!MESSAGE UI thread waiting on a job or lock.
+!STACK 0
+java.lang.IllegalStateException: Call stack for thread main
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:75)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer$$Lambda$834/0x00000008015629d8.run(Unknown Source)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.ui.internal.Workbench$$Lambda$213/0x0000000800dde1f0.run(Unknown Source)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base@16.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@16.0.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base@16.0.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@16.0.1/java.lang.reflect.Method.invoke(Method.java:567)
+	at app//org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at app//org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at app//org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at app//org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-02-19 12:20:35.778
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-02-19 12:20:35.809
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+!SESSION 2022-02-21 14:03:49.474 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2022-02-21 14:04:52.005
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-02-21 14:04:52.005
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@20b921be,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@431923ed,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-02-21 14:05:27.774
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-02-21 14:05:27.777
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-02-21 14:05:29.934
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Maria Izabel'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-21 14:05:50.739
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-21 14:05:50.913
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+!SESSION 2022-02-28 15:16:25.849 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data C:\Users\Maria Izabel\Documents\JAVA_ARQUIVOS\dio-java\Exercicios -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2022-02-28 15:17:00.084
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-02-28 15:17:00.084
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3d763ae5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2dfab167,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2022-02-28 15:17:12.235
+!MESSAGE Plug-in 'org.eclipse.egit.ui' contributed an invalid Menu Extension (Path: 'org.eclipse.search.menu' is invalid): org.eclipse.egit.ui.actions.OpenCommitSearchPage
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-02-28 15:17:32.399
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Maria Izabel'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-28 15:17:44.716
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-02-28 15:17:44.719
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)
+
+!ENTRY org.eclipse.ui 4 0 2022-02-28 15:19:26.611
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.swt.custom.StyledText.isFocusControl()" because the return value of "org.eclipse.jface.text.ITextViewer.getTextWidget()" is null
+	at org.eclipse.jdt.internal.ui.javaeditor.breadcrumb.EditorBreadcrumb.lambda$0(EditorBreadcrumb.java:220)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1270)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1048)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2956)
+	at org.eclipse.swt.widgets.Widget.wmSetFocus(Widget.java:2266)
+	at org.eclipse.swt.widgets.Control.WM_SETFOCUS(Control.java:5441)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4832)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4930)
+	at org.eclipse.swt.internal.win32.OS.DestroyWindow(Native Method)
+	at org.eclipse.swt.widgets.Control.destroyWidget(Control.java:782)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:810)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:416)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.disposeWidget(SWTPartRenderer.java:173)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:286)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:865)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:849)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:185)
+	at jdk.internal.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:92)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:314)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1400)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1330)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1182)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1042)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1960)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:335)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1434)

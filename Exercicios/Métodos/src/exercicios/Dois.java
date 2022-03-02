@@ -9,17 +9,18 @@ public class Dois {
 
 	public void calcularArea(int lado){
 		areaQuadrilatero= lado * lado;
-		System.out.println("A area é: " + areaQuadrilatero + "\n");
+		System.out.println("A area Ã©: " + areaQuadrilatero + "\n");
 	}
 	
 	public void calcularArea(int lado, int base){
 		areaQuadrilatero= lado * base;
-		System.out.println("A area é: " + areaQuadrilatero + "\n");
+		System.out.println("A area Ã©: " + areaQuadrilatero + "\n");
 	}
 	
 	public void calcularArea(int baseMaior, int baseMenor, int altura){
 		areaQuadrilatero= ((baseMaior + baseMenor) * altura) / 2;
-		System.out.println("A area é: " + areaQuadrilatero + "\n");
+		System.out.println("A area Ã©: " + areaQuadrilatero + "\n");
 	}
+
 	
 }

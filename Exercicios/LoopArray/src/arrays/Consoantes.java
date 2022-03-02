@@ -23,7 +23,7 @@ public class Consoantes {
 		System.out.println("\nO total de consoantes é: " + total + ". As consoantes são:\n" );
 		for(int i=0; i<vetor.length; i++) {
 			if(vetor[i]!= null)
-			System.out.println(vetor[i]);
+				System.out.println(vetor[i]);
 		}
 	}
 }
