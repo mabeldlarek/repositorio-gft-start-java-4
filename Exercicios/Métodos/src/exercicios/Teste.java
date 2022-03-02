@@ -3,13 +3,13 @@ package exercicios;
 public class Teste {
 
 	public static void main(String[] args) {
-		System.out.println("Exercício um sendo executado:");
+		System.out.println("Exercicio um sendo executado:");
 		
 		Um operacao = new Um();
 		Um mensagem = new Um();
 		Um emprestimo = new Um();
 		
-		operacao.escolhaOperação(1, 2, 2);
+		operacao.escolhaOperacao(1, 2, 2);
 		
 		mensagem.printarMensagem(14);
 		
@@ -17,7 +17,7 @@ public class Teste {
 		
 		System.out.println("------------------------------");
 		
-		System.out.println("Exercício dois sendo executado:");
+		System.out.println("Exercicio dois sendo executado:");
 		
 		Dois ex2 = new Dois();
 		ex2.calcularArea(5);
@@ -26,7 +26,7 @@ public class Teste {
 		
 		System.out.println("------------------------------");
 		
-		System.out.println("Exercício três sendo executado:");
+		System.out.println("Exercicio três sendo executado:");
 		
 		Três ex3 = new Três();
 		System.out.println(ex3.calcularArea(5));

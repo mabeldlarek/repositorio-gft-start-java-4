@@ -1,26 +1,15 @@
 package br.com.maria.ProjetoBancoDigital;
 
 public class ContaCorrente extends Conta {
-
-	public ContaCorrente(Integer numeroConta, Integer senha, Double saldo) {
-		super(numeroConta, senha, saldo);
+	
+	public ContaCorrente() {
+		super();
+		
 	}
-
-	@Override
-	public void depositar(Double valor) {
-		this.setSaldo(this.getSaldo() + valor);
+	
+	public void imprimirExtrato(){
+		System.out.println("-----Extrato conta corrente------");
+		super.imprimirExtrato();
 	}
-
-	@Override
-	public void sacar(Double valor) {
-		double taxaSaque = 1.40;
-		this.setSaldo(this.getSaldo() - (valor + taxaSaque));
-	}
-
-	@Override
-	public void transferir(Integer numConta, Double valor) {
-		double taxaTranferencia = 1.10;
-		this.setSaldo(getSaldo() - (valor + taxaTranferencia));
-	};
-
+	
 }
